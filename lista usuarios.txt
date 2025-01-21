@@ -1,0 +1,7 @@
+administrador
+usuario: hermsale@gmail.com 
+contraseña: alejandro2024
+
+usuario común:
+usuario: agustintejero@gmail.com
+contraseña: agustin2024

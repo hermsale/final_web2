@@ -1,0 +1,29 @@
+body {
+    background-color: #141414;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+.profile {
+    margin: 20px;
+    }
+
+.profile img {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    transition: transform 0.3s;
+}
+.profile img:hover {
+    transform: scale(1.1);
+}
+.profile-name {
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 2.5rem; /* Ajusta el tamaño de fuente aquí */
+}
+.profile img:hover {
+    background: linear-gradient(45deg, #292929, #959493);
+    /* Otros estilos necesarios para que el gradiente se aplique correctamente */
+}

@@ -1,0 +1,59 @@
+.card-img-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img-left {
+    width: 50%;
+    position: relative;
+}
+
+.btn-overlay {
+    position: absolute;
+    bottom: 10px;
+    left:10px;
+}
+
+.card-body {
+    width: 50%;
+    color: white; /* Letra blanca */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* banner */
+
+@media(max-width:899px){
+    .banner img {
+       width: 100%;
+    }
+}
+
+@media(min-width:900px ){
+    
+    #div__banner{
+        display: flex;
+        justify-content: center ;
+    }
+    .banner {
+        position: relative;
+        width: 100vw;
+        height: 100vh; /* Ajusta el alto al 100% de la altura de la pantalla */
+        max-width: 1300px;
+        overflow: hidden;
+    }
+    
+    .banner img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+    }
+    
+}

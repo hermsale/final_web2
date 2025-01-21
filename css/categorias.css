@@ -1,0 +1,43 @@
+/* reseteamos el font size para que rem trabaje con un equivalente a 10 px = 1 rem  */
+html{
+  /* tamaño letra */
+  font-size: 62.5%;
+}    
+/* reseteamos el margin y padding de todos los elementos */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto del elemento */
+}
+
+body {
+  background-color: black; /* Fondo negro */
+  color: white; /* Texto blanco */
+}
+  .category-card {
+    transition: transform 0.2s;
+}
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+/* fuente */
+.exo-2{
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
+
+p{
+  font-size: larger;
+}
+
+.p__footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+.h1__categorias{
+  margin-top: 50px;
+}

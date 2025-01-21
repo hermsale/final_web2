@@ -1,0 +1,398 @@
+/* reseteamos el font size para que rem trabaje con un equivalente a 10 px = 1 rem  */
+html{
+    /* tamaño letra */
+    font-size: 62.5%;
+}    
+
+/* reseteamos el margin y padding de todos los elementos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto del elemento */
+}
+
+/* establezco estilos básicos para el body */
+body{
+    background-color: rgba(61, 60, 60, 0.637);
+}    
+
+.scrolling-wrapper {
+    overflow-x: visible;
+    white-space: nowrap;
+}
+
+.card{
+    display: inline-block;
+    margin-right: 10px; /* Ajusta el espacio entre las cards */
+    cursor: pointer;
+}
+
+/* fuente */
+.exo-2{
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
+
+.card-body .card-title img {
+    position: inherit;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; /* Animación suave para aparecer/desaparecer */
+}
+
+.p__cardSeguirViendo--img{
+    display: flex;
+    justify-content: end;
+}
+
+
+/* colocamos el icono en el margen inferior derecho cuando hacemos hover */
+.card{
+    position: relative;
+    overflow: hidden; /* Asegura que los elementos hijos no se salgan del contenedor */
+}
+.card-body {
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    padding: 10px;
+    
+}
+.card-body .card-title img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Mostramos los iconos al hacer hover sobre la tarjeta */
+.card:hover .card-body .card-title img {
+    opacity: 1;
+}
+
+/* el icono del top 10 de la semana se va a visualizar siempre */
+.card-top-10 .card-title img {
+    opacity: 1;
+    /* transition: opacity 0.3s ease-in-out; */
+}
+
+
+
+
+/* carousel principal ///////////////////////////////////////////////////////*/
+.carousel-inner {
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    /* overflow-x: auto; */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.carousel-inner::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.card {
+    flex: 0 0 auto;
+    margin: 1px;
+    /* border: none; Optional: Remove card border if needed */
+    
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    border-radius: 0; /* Remove rounded corners if not needed */
+}
+
+/* efectos de los card seguir viendo */
+.card-seguir-viendo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Para asegurar que el contenido respete los bordes redondeados */
+  }
+
+  .card-seguir-viendo:hover {
+    transform: scale(1.05); /* Efecto de escala */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+  }
+
+/* top 10 efectos */
+  .card-top-10 {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px; /* Bordes redondeados */
+        overflow: hidden; /* Para asegurar que el contenido respete los bordes redondeados */
+      }
+
+      .card-top-10:hover {
+        transform: scale(1); /* Efecto de escala */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+      }
+      
+/* aplicaciones fondo */
+.card-app {
+    width: 15%;
+    background-color: rgb(0, 0, 0, 0);
+    /* transition: background-color 1s ease; */
+    transition: transform 0.3s ease, background-color 1s ease, backdrop-filter 1s ease;
+    border: 0px;
+    /* margin: 2px; */
+    position: relative; /* Para que .loading se posicione correctamente */
+}
+
+.card-app:hover{
+    background-color: rgba(0, 48, 62, 0.6); /* Cambia el color de fondo */
+    backdrop-filter: blur(10px); /* Efecto de difuminado */
+    transform: scale(0.9); /* Efecto de escala */
+    box-shadow: 0 0 20px 10px rgba(10, 10, 10, 0.6);
+}
+
+.div__card-app{
+    width: 100%;
+}
+
+.card-netflix-app:hover{
+    width: 15%;
+    background-color: rgb(255, 2, 12, 0.600);
+    transition:  background-color 1s ease;
+
+    /* efecto escala */
+    transition: transform 0.3s ease, background-color 1s ease;
+    transform: scale(0.9); 
+}
+
+.card-disney-app:hover{
+    width: 15%;
+    background-color: rgba(0, 48, 62, 0.600);
+    transition:  background-color 1s ease;
+
+    /* efecto escala */
+    transition: transform 0.3s ease, background-color 1s ease;
+    transform: scale(0.9); 
+    
+}
+
+.card-hbo-app:hover{
+    width: 15%;
+    background-color: rgb(50, 9, 88, 0.600);
+    transition:  background-color 1s ease;
+
+    /* efecto escala */
+    transition: transform 0.3s ease, background-color 1s ease;
+    transform: scale(0.9); 
+}
+
+.card-paramount-app:hover{
+    width: 15%;
+    background-color: rgb(0, 100, 255, 0.600);
+    transition:  background-color 1s ease;
+   
+    /* efecto escala */
+    transition: transform 0.3s ease, background-color 1s ease;
+    transform: scale(0.9); 
+}
+
+.card-paramount:hover{
+    border: rgb(255, 255, 255, 0.600) 1px solid;
+}
+
+.card-prime-app:hover{
+    width: 15%;
+    background-color: rgb(0, 153, 255, 0.600);
+    transition:  background-color 1s ease;
+
+    /* efecto escala */
+    transition: transform 0.3s ease, background-color 1s ease;
+    transform: scale(0.9); 
+}
+
+.card-prime:hover{
+    border: rgb(0, 0, 0) 1px solid;
+}
+
+/* efecto al soltar */
+.card-add-app:hover{
+    width: 15%;
+    background-color: rgb(124, 179, 26, 0.600);
+    transition:  background-color 1s ease;
+    /* efecto escala */
+    transition: transform 0.3s ease, background-color 1s ease;
+    transform: scale(0.9); 
+}
+
+/* botones del carousel top 10 */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 5%; /* Ajusta el tamaño del botón */
+    height: 98%;
+    z-index: 9999;
+}
+
+.carousel-control-prev{
+    left: 0;
+}
+
+.carousel-control-next{
+    right: 0;
+}
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.300);
+    height: 99%;
+}
+
+.carousel:hover .carousel-control-next{
+    border-radius: 0 15px 15px 0;
+}
+
+.carousel:hover .carousel-control-prev{
+    border-radius: 15px 0 0 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 100%; /* Hace que el ícono ocupe todo el tamaño del contenedor */
+    height: 100%; /* Hace que el ícono ocupe todo el tamaño del contenedor */
+}
+
+
+.hover-bg-black:hover {
+    border-color: white;
+}
+
+/* SECCION SEGUIR VIENDO /////////////////////////////////////////////// */
+/* seccion seguir viendo . se agranda al pasar por arriba*/
+.card-seguir-viendo:hover{
+    transition: transform 0.3s ease, background-color 1s ease;
+    transform: scale(1.08); 
+    z-index: 100;
+}
+
+/* vuelve a su tamaño original */
+.card-seguir-viendo{
+    transition: transform 0.3s ease, background-color 1s ease;
+    transform: scale(1); 
+
+    margin: 5px;
+}
+
+
+/* iconos  */
+/* img {
+    filter: invert(42%) sepia(92%) saturate(500%) hue-rotate(200deg) brightness(90%) contrast(85%);
+    transition: filter 0.3s ease;
+} */
+
+/* img:hover {
+    filter: invert(21%) sepia(74%) saturate(600%) hue-rotate(340deg) brightness(85%) contrast(95%);
+} */
+
+.icon-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.icon-wrapper img {
+    filter: brightness(0) invert(0); /* Hace blanco el icono si es monocromático */
+    transition: filter 0.3s ease;
+}
+
+.icon-wrapper:hover img {
+    filter: brightness(0) invert(0.5) sepia(100%) hue-rotate(150deg); /* Cambia a otro color */
+}
+/* seccion top 10 */
+/* .card:hover{
+    transition: transform 0.3s ease, background-color 1s ease;
+    transform: scale(1.08); 
+    z-index: 100;
+}
+
+.card{
+    transition: transform 0.3s ease, background-color 1s ease;
+    transform: scale(1); 
+} */
+
+/* Ajuste de diseño para diferentes tamaños de pantalla */
+/* .card-img-top {
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+} */
+
+/* Mostrar solo en desktop */
+@media (min-width: 1200px) {
+    .carousel-desktop {
+        display: block;
+    }
+    .carousel-laptop,
+    .carousel-mobile {
+        display: none;
+    }
+
+    .carousel-principal-mobile{
+        display: none;
+    }
+
+    .carousel-principal{
+        display: block;
+    }
+}
+
+/* Mostrar solo en laptop */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .carousel-laptop {
+        display: block;
+    }
+    .carousel-desktop,
+    .carousel-mobile {
+        display: none;
+    }
+
+    .carousel-principal-mobile{
+        display: block;
+    }
+
+    .carousel-principal{
+        display: none;
+    }
+}
+
+/* Mostrar solo en mobile */
+@media (max-width: 767px) {
+    .carousel-mobile {
+        display: block;
+    }
+    .carousel-desktop,
+    .carousel-laptop {
+        display: none;
+    }
+
+    .carousel-principal-mobile{
+        display: block;
+    }
+
+    .carousel-principal{
+        display: none;
+    }
+}
+
+/* Estilo general para las imágenes */
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo para imágenes en pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    .img-responsive {
+        width: 130px;
+        height: 200px;
+    }
+}
